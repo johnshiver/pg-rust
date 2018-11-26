@@ -21,8 +21,8 @@ fn main() {
     let port = 1234;
     let address = "127.0.0.1";
     let address_port = format!("{}:{}", address, port);
-
-    let listener = TcpListener::bind(address_port).expect("Could not bind");
+    let listener = TcpListener::bind(&address_port).expect("Could not bind");
+    println!("Connected to {}", address_port);
     for stream in listener.incoming() {
         match stream {
             Err(e) => eprintln!("failed: {}", e),
