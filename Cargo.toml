@@ -1,0 +1,6 @@
+[package]
+name = "pg-rust"
+version = "0.1.0"
+authors = ["John Shiver <johneshiver@gmail.com>"]
+
+[dependencies]
